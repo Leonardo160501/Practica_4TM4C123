@@ -13,7 +13,7 @@ extern void Configura_Reg_ADC0(void)
    SYSCTL->RCGCGPIO |= (1<<4); //Habilitar el puerto E para el canal ANI0
    //Configurar el canal 8 a una velocidad de 1 Msps
    //SS2 secuenciador de 2 muestra del convertidor por software
-   GPIOE->AFSEL = 0x0000; //Patra ver que funcion alternativa usar
+   GPIOE->AFSEL = 0x0000; //Para ver que funcion alternativa usar
    GPIOE->DIR |= (0<<3) | (0<<2); //usar el pin 3 y 2 del puerto E como entrada 0 Entrada | 1 Salida
    GPIOE->DEN |= 0x00; //Desactivamos la funcion digital porque es analogico
    GPIOE->PCTL = (GPIOE->PCTL & 0xFFFF00FF); //Se limpia el registro de control.
