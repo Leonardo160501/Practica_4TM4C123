@@ -45,8 +45,8 @@ extern void Configura_Reg_ADC0(void)
    ADC0->EMUX = (0x0<<8) | (0x0<<4);
    ADC0->SSMUX2 = (ADC0->SSMUX2 & ~0xFFFF) | (1<<0) | (3<<4) | (4<<8) | (5<<12);
    ADC0->SSMUX1 = (ADC0->SSMUX1 & ~0x0F) | (11<<0) | (9<<4);
-   ADC0->SSCTL2 = (1<<1) | (1<<2) | (1<<5) | (1<<6) | (1<<9) | (1<<10) | (1<<13);
-   ADC0->SSCTL1 = (1<<1) | (1<<2) | (1<<5) | (1<<6);
+   ADC0->SSCTL2 = (1<<2) | (1<<6) | (1<<10) | (1<<13);
+   ADC0->SSCTL1 = (1<<2) | (1<<5) | (1<<6);
    ADC0->IM = (1<<2) | (1<<1); //Deshabilita la mascara de la interrupcion
    ADC0->ACTSS = (1<<2) | (1<<1);
    ADC0->PSSI |= (1<<2) | (1<<1);
